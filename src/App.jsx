@@ -49,7 +49,6 @@ function App() {
             and the dashboards that make them measurable.
           </p>
           <div className="cta-row">
-            <a className="btn primary" href="mailto:contactsahidmodi@gmail.com">Get in touch</a>
             <a className="btn" href="https://github.com/sahidmodi45" target="_blank" rel="noreferrer">GitHub</a>
             <a className="btn" href="https://linkedin.com/in/sahid-modi-7300942aa" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
