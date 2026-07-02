@@ -1,122 +1,112 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 
+const SKILLS = [
+  { cat: 'Automation & Scripting', items: ['Google Apps Script', 'Gmail API', 'JavaScript', 'Python', 'SQLite', 'Bash / Terminal'] },
+  { cat: 'Growth & Outreach', items: ['Cold Email Systems', 'Campaign Automation', 'Lead Management', 'A/B Testing', 'Stakeholder Reporting'] },
+  { cat: 'Data & Analytics', items: ['Google Sheets', 'Campaign Analytics', 'Attribution Tracking', 'Pandas', 'scikit-learn'] },
+  { cat: 'AI & ML', items: ['Claude API', 'OpenCV', 'Face Recognition', 'NLP / Spam Detection', 'cryptography'] },
+]
+
+const EXPERIENCE = [
+  {
+    org: 'Myluigi.ai',
+    role: 'Growth & Outbound Systems Intern',
+    points: [
+      'Built a multi-stage cold outreach system targeting 500+ game studios and SaaS companies.',
+      'Designed automated Fresh → F1 → F2 → F3 follow-ups that lifted response rates by 35%.',
+      'Integrated the Gmail API to map thread-level data to campaigns for accurate performance analysis.',
+      'Presented results and strategy directly to founders, turning data into actionable insight.',
+    ],
+  },
+  {
+    org: 'JustBaat.ai',
+    role: 'Growth & Outbound Systems Intern',
+    points: [
+      'Built an automated outbound engine converting cold lists into structured campaigns across 20+ cycles.',
+      'Automated execution and tracking with Google Apps Script, cutting manual effort by 60%.',
+      'Refined attribution logic and debugged tracking, reducing reporting errors by 45%.',
+    ],
+  },
+]
+
+const PROJECTS = [
+  { name: 'SmartScheduler', tagline: 'AI timetable generator that builds conflict-free schedules from your tasks and time slots.', tech: ['Python', 'JS', 'Apps Script'] },
+  { name: 'VaultKey', tagline: 'Password manager that AES-encrypts every credential behind a master key — no plaintext, ever.', tech: ['Python', 'cryptography', 'SQLite'] },
+  { name: 'FaceLog', tagline: 'Real-time facial-recognition attendance with timestamped logging and 95%+ accuracy.', tech: ['Python', 'OpenCV', 'face_recognition'] },
+  { name: 'SpamShield', tagline: 'NLP spam detector trained on real inbox data, flagging spam in real time at 92%+ accuracy.', tech: ['Python', 'Gmail API', 'scikit-learn'] },
+]
+
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>👋 Hi Sahid — this updated live!</h1>
-          <p>
-            Claude just edited <code>src/App.jsx</code> in the left pane, and this
-            page refreshed by itself. That's your workflow. 🎉
+    <div className="site">
+      <header className="hero">
+        <div className="hero-inner">
+          <p className="eyebrow">Growth &amp; Automation · ECE Undergraduate</p>
+          <h1>Sahid Modi</h1>
+          <p className="lede">
+            I build automation and outbound systems that turn cold lists into
+            real conversations — cold-email engines, Gmail-API data pipelines,
+            and the dashboards that make them measurable.
           </p>
+          <div className="cta-row">
+            <a className="btn primary" href="mailto:contactsahidmodi@gmail.com">Get in touch</a>
+            <a className="btn" href="https://github.com/sahidmodi45" target="_blank" rel="noreferrer">GitHub</a>
+            <a className="btn" href="https://linkedin.com/in/sahid-modi-7300942aa" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+          <p className="meta">Bengaluru, India · B.E. ECE @ CMR Institute of Technology (2027)</p>
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+      </header>
 
-      <div className="ticks"></div>
+      <main>
+        <section className="block">
+          <h2>Skills</h2>
+          <div className="skills">
+            {SKILLS.map((s) => (
+              <div className="skill-group" key={s.cat}>
+                <h3>{s.cat}</h3>
+                <div className="tags">
+                  {s.items.map((t) => <span className="tag" key={t}>{t}</span>)}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+        <section className="block">
+          <h2>Experience</h2>
+          {EXPERIENCE.map((e) => (
+            <div className="entry" key={e.org}>
+              <div className="entry-head">
+                <span className="entry-org">{e.org}</span>
+                <span className="entry-role">{e.role}</span>
+              </div>
+              <ul>{e.points.map((p) => <li key={p}>{p}</li>)}</ul>
+            </div>
+          ))}
+        </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+        <section className="block">
+          <h2>Projects</h2>
+          <div className="projects">
+            {PROJECTS.map((p) => (
+              <div className="card" key={p.name}>
+                <h3>{p.name}</h3>
+                <p>{p.tagline}</p>
+                <div className="tags">
+                  {p.tech.map((t) => <span className="tag mono" key={t}>{t}</span>)}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>Let's build something.</p>
+        <a href="mailto:contactsahidmodi@gmail.com">contactsahidmodi@gmail.com</a>
+        <p className="fine">© {new Date().getFullYear()} Sahid Modi</p>
+      </footer>
+    </div>
   )
 }
 
