@@ -33,8 +33,13 @@ function App() {
     <div className="site">
       <header className="hero">
         <div className="hero-inner">
-          <p className="eyebrow">Growth &amp; Automation · ECE Undergraduate</p>
-          <h1>Sahid Modi</h1>
+          <div className="hero-head">
+            <img className="portrait" src="/portrait.png" alt="Sahid Modi" width="112" height="112" />
+            <div>
+              <p className="eyebrow">Growth &amp; Automation · ECE Undergraduate</p>
+              <h1>Sahid Modi</h1>
+            </div>
+          </div>
           <p className="lede">
             I build automation and outbound systems that turn cold lists into
             real conversations — cold-email engines, Gmail-API data pipelines,

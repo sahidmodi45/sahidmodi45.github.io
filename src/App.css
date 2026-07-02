@@ -30,6 +30,15 @@
   padding: 96px 24px 72px;
 }
 .hero-inner { max-width: 760px; margin: 0 auto; }
+.hero-head { display: flex; align-items: center; gap: 24px; margin-bottom: 4px; }
+.hero-head .eyebrow { margin-bottom: 8px; }
+.portrait {
+  width: clamp(88px, 15vw, 120px); height: clamp(88px, 15vw, 120px);
+  border-radius: 50%; object-fit: cover; object-position: center 30%;
+  border: 2px solid var(--rule); flex-shrink: 0;
+  transition: border-color .2s ease;
+}
+.portrait:hover { border-color: var(--accent); }
 .eyebrow {
   font-size: 12px; letter-spacing: 3px; text-transform: uppercase;
   color: var(--accent); font-weight: 600; margin-bottom: 16px;
