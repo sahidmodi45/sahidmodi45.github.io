@@ -9,22 +9,14 @@ const SKILLS = [
 
 const EXPERIENCE = [
   {
-    org: 'Myluigi.ai',
-    role: 'Growth & Outbound Systems Intern',
+    org: 'Growth & Outbound Systems Intern',
+    role: 'Myluigi.ai · JustBaat.ai',
     points: [
-      'Built a multi-stage cold outreach system targeting 500+ game studios and SaaS companies.',
+      'Built multi-stage cold outreach systems targeting 500+ game studios and SaaS companies across 20+ campaign cycles.',
       'Designed automated Fresh → F1 → F2 → F3 follow-ups that lifted response rates by 35%.',
-      'Integrated the Gmail API to map thread-level data to campaigns for accurate performance analysis.',
-      'Presented results and strategy directly to founders, turning data into actionable insight.',
-    ],
-  },
-  {
-    org: 'JustBaat.ai',
-    role: 'Growth & Outbound Systems Intern',
-    points: [
-      'Built an automated outbound engine converting cold lists into structured campaigns across 20+ cycles.',
-      'Automated execution and tracking with Google Apps Script, cutting manual effort by 60%.',
+      'Automated execution and tracking with Google Apps Script and the Gmail API, cutting manual effort by 60%.',
       'Refined attribution logic and debugged tracking, reducing reporting errors by 45%.',
+      'Presented results and strategy directly to founders, turning data into actionable insight.',
     ],
   },
 ]
