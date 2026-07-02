@@ -16,9 +16,10 @@ function App() {
           <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
         <div>
-          <h1>Get started</h1>
+          <h1>👋 Hi Sahid — this updated live!</h1>
           <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+            Claude just edited <code>src/App.jsx</code> in the left pane, and this
+            page refreshed by itself. That's your workflow. 🎉
           </p>
         </div>
         <button
